@@ -1,5 +1,5 @@
 ---
-name: design-review
+name: jo-design-review
 description: Run a structured design critique against the brief and codebase. Checks visual hierarchy, consistency, responsiveness, accessibility, and aesthetic fidelity. Use when user wants a design review, critique, QA pass, polish pass, or mentions "review" after building.
 ---
 
@@ -35,9 +35,9 @@ This skill runs a structured design review of what has been built, measured agai
    ### Screenshot Tool Priority
 
    Try each option in order. Use the first one that is available:
-   1. **Playwright MCP (preferred).** Check if the `plugin-playwright-playwright` MCP server is available. If it is, use it — it gives you precise control over viewport sizing, full-page captures, and file naming.
-   2. **Cursor IDE Browser (second choice).** If Playwright MCP is not available, use the `cursor-ide-browser` MCP server's `browser_take_screenshot` tool instead. It has the same core capabilities.
-   3. **Ask the user (last resort).** If neither MCP server nor in-app browser is available, you MUST ask the user to provide screenshots manually. Be specific about what you need:
+   1. **gstack `/browse` (preferred).** Use gstack's browse skill to open the running app, set each viewport width and save full-page screenshots under `.design/<feature>/screenshots/`. (PorterBrain fork: Sam's machines use gstack for all browsing.)
+   2. **Playwright MCP (fallback).** Only if `/browse` is unavailable, use the `plugin-playwright-playwright` MCP server if present. The tool-call examples below use its tool names; translate them to `/browse` commands.
+   3. **Ask the user (last resort).** If no browser tool is available, you MUST ask the user to provide screenshots manually. Be specific about what you need:
       - "I don't have access to a browser tool. To complete the visual review I need screenshots of the running application. Please provide:"
       - A full-page screenshot at **desktop** width (1280px)
       - A full-page screenshot at **tablet** width (768px)

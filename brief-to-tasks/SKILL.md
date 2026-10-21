@@ -63,7 +63,7 @@ Date: [date]
 - [ ] **[Task name]**: Accessibility pass. [Specific checks from the brief].
 
 ## Review
-- [ ] **Design review**: Run /design-review against the brief.
+- [ ] **Design review**: Run /jo-design-review against the brief.
 ```
 
 ## Rules

@@ -1,5 +1,5 @@
 ---
-name: frontend-design
+name: jo-frontend-design
 description: Build distinctive, production-grade frontend interfaces with high design quality, guided by named aesthetic philosophies. Use when building components, pages, or applications. Generates working code with exceptional attention to aesthetic details and creative choices that avoid generic AI output.
 ---
 

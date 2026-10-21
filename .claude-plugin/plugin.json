@@ -21,10 +21,10 @@
     "./brief-to-tasks",
     "./design-brief",
     "./design-flow",
-    "./design-review",
+    "./jo-design-review",
     "./design-tokens",
-    "./frontend-design",
-    "./grill-me",
+    "./jo-frontend-design",
+    "./jo-grill-me",
     "./information-architecture"
   ]
 }

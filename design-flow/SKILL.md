@@ -28,7 +28,7 @@ This skill orchestrates the full designer workflow by running each skill in sequ
 ## Rules
 
 1. **At the start**, tell the designer what the full sequence looks like (phases 1-6, with review available separately) and ask if they want to skip any phases. Common skip patterns:
-   - Already have a clear idea → skip grill-me
+   - Already have a clear idea → skip jo-grill-me
    - Single component, not a full page → skip information-architecture
    - Existing project with tokens → skip design-tokens
 
@@ -46,7 +46,7 @@ This skill orchestrates the full designer workflow by running each skill in sequ
 
 ### Phase 1: Grill Me
 
-Read the `grill-me` skill (grill-me/SKILL.md) and follow its instructions.
+Read the `jo-grill-me` skill (jo-grill-me/SKILL.md) and follow its instructions.
 **Produces**: Shared understanding of the project. No file output.
 **Transition**: "We've resolved the key decisions. Ready to capture this as a design brief?"
 
@@ -76,10 +76,10 @@ Read the `brief-to-tasks` skill (brief-to-tasks/SKILL.md) and follow its instruc
 
 ### Phase 6: Frontend Design
 
-Read the `frontend-design` skill (frontend-design/SKILL.md) and follow its instructions.
+Read the `jo-frontend-design` skill (jo-frontend-design/SKILL.md) and follow its instructions.
 Work through the tasks from `TASKS.md` in order. After completing each task, check it off and confirm with the designer before moving to the next task.
 **Produces**: Built components and pages.
-**Transition**: "The flow is complete. Your brief, IA, tokens, and tasks are all saved in the project. When you're ready for a design review, run `/design-review` and I'll critique the build against the brief."
+**Transition**: "The flow is complete. Your brief, IA, tokens, and tasks are all saved in the project. When you're ready for a design review, run `/jo-design-review` and I'll critique the build against the brief."
 
 **The flow ends here.** Phase 7 is not automatic.
 
@@ -88,11 +88,11 @@ Work through the tasks from `TASKS.md` in order. After completing each task, che
 This phase does NOT run automatically. It only runs if:
 
 - The designer explicitly asks for a review during the flow
-- The designer runs `/design-review` separately after building
+- The designer runs `/jo-design-review` separately after building
 
-The review requires built code to examine. If no components or pages have been built yet, do not run this phase. Instead, remind the designer: "Run `/design-review` once you have something built. It will check the output against the brief."
+The review requires built code to examine. If no components or pages have been built yet, do not run this phase. Instead, remind the designer: "Run `/jo-design-review` once you have something built. It will check the output against the brief."
 
-When triggered, read the `design-review` skill (design-review/SKILL.md) and follow its instructions. The review will capture screenshots of the running application using Playwright MCP (preferred), the Cursor IDE Browser (fallback), or by asking the user to provide them manually if no browser tool is available.
+When triggered, read the `jo-design-review` skill (jo-design-review/SKILL.md) and follow its instructions. The review will capture screenshots of the running application using Playwright MCP (preferred), the Cursor IDE Browser (fallback), or by asking the user to provide them manually if no browser tool is available.
 
 **Produces**: `.design/<feature-slug>/DESIGN_REVIEW.md` + screenshots saved in `.design/<feature-slug>/screenshots/`.
 **Transition**: "Review is done. Screenshots are saved in `.design/<feature-slug>/screenshots/`. If there are must-fix items, I can address them now."
